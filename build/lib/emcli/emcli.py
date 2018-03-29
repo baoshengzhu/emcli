@@ -78,10 +78,7 @@ def main():
     meta.subject = parser.subject
     meta.recipients = parser.recipients
     meta.attaches = parser.attaches
-    print("---1%s:2%s")%(meta.subject,meta.attaches)
-    if not meta.attaches:
-	    send_email(meta)
-	    exit()
+
     for attach in meta.attaches:
         if not os.path.exists(attach):
             logger.error('{0} is not exists'.format(attach))

@@ -1,0 +1,9 @@
+with yagmail.SMTP(user='153620863@qq.com',password='xsdixisgkpjabhbg',host='smtp.qq.com',port="465") as yag:
+    yag.send('13580406171@139.com','this mail com from yagmail','this is test')
+
+#其中这里的passwd是来自：打开QQ邮箱--设置--账户--IMP/SMTP开启--手机验证--获取pwd码
+
+
+python  emcli.py  -s "1老婆，你好" -r 153620863@qq.com -a logger.pyc  storage.py  storage.pyc  < /etc/passwd
+
+echo "Hi,I'am Benson" | python  emcli.py  -s "老婆，你好" -r 343965291@qq.com 13580406171@139.com 153620863@qq.com
