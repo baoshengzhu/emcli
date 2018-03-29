@@ -43,7 +43,8 @@ def get_meta_from_config(config_file):
             logger.error(err)
             raise SystemExit(err)
         else:
-            meta[key] = val
+            #meta[key] = val
+            meta.key = val
 
     return meta
 
@@ -78,7 +79,6 @@ def main():
     meta.subject = parser.subject
     meta.recipients = parser.recipients
     meta.attaches = parser.attaches
-    print("---1%s:2%s")%(meta.subject,meta.attaches)
     if not meta.attaches:
 	    send_email(meta)
 	    exit()
